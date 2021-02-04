@@ -1,0 +1,47 @@
+﻿@page
+@using System.Linq
+@model WebApplication7.Models.Estacions
+@{
+
+}
+
+<h1 class="text-danger">HISTORIA.</h1>
+
+<p>
+    <strong>Historic a tope:</strong> <code>@**@</code>
+</p>
+
+<h2>@ViewBag.estacio.idEstacio</h2>
+<h2>@ViewBag.estacio.outTemp</h2>
+<h2>@ViewBag.estacio.heatindex</h2>
+<h2>@ViewBag.estacio.windchill</h2>
+<h2>@ViewBag.estacio.dewpoint</h2>
+<h2>@ViewBag.estacio.outHumidity</h2>
+<h2>@ViewBag.estacio.barometer</h2>
+<h2>@ViewBag.estacio.windSpeed</h2>
+<h2>@ViewBag.estacio.rainRate</h2>
+<h2>@ViewBag.estacio.rain</h2>
+<h2>@ViewBag.estacio.inTemp</h2>
+<h2>@ViewBag.estacio.inHumidity</h2>
+<h2>@ViewBag.estacio.dataHuma</h2>
+
+<label for="start">Data Inici:</label>
+
+<input type="date" id="start" name="trip-start"
+       value="2020-12-18"
+       min="2018-01-01" max="2025-12-31">
+
+<label for="start">Data Fi:</label>
+
+<input type="date" id="end" name="trip-start"
+       value="2020-11-18"
+       min="2018-01-01" max="2025-12-31">
+
+<input type="button" value="Go Somewhere Else" onclick="location.href='<%: Url.Action(" Action", "Controller" ) %>'" />
+
+<button type="button" id="btn" onclick="cercaHistoric(start, end)"> HISTORIC MENSUAL!</button>
+@functions{
+
+}
+
+}
